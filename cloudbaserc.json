@@ -8,11 +8,13 @@
                 "use": "@cloudbase/framework-plugin-container",
                 "inputs": {
                     "serviceName": "gogs",
+                    "cpu":0.5,
+                    "mem":1,
                     "servicePath": "/",
                     "localPath": "./",
                     "uploadType": "image",
                     "imageInfo": {
-                        "imageUrl": "gogs/gogs"
+                        "imageUrl": "ccr.ccs.tencentyun.com/tcb-100004533978-lqlh/gogs-7gbnssd13816e799_gogs:latest"
                     },
                     "containerPort": 3000,
                     "envVariables": {},
