@@ -1,0 +1,37 @@
+{
+    "version": "2.0",
+    "envId": "{{env.ENV_ID}}",
+    "framework": {
+        "name": "gogs",
+        "plugins": {
+            "client": {
+                "use": "@cloudbase/framework-plugin-container",
+                "inputs": {
+                    "serviceName": "gogs",
+                    "servicePath": "/",
+                    "localPath": "./",
+                    "uploadType": "image",
+                    "imageInfo": {
+                        "imageUrl": "gogs/gogs"
+                    },
+                    "containerPort": 3000,
+                    "envVariables": {},
+                    "volumeMounts": {
+                        "/data": "gogs-cfs"
+                    }
+                }
+            }
+        },
+        "requirement": {
+            "addons": [
+                {
+                    "type": "CFS",
+                    "name": "gogs-cfs"
+                }
+            ]
+        }
+    },
+    "functionRoot": "./functions",
+    "functions": [],
+    "region": "ap-shanghai"
+}
